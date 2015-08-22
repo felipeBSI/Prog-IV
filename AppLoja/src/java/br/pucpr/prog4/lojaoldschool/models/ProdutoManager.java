@@ -21,20 +21,20 @@ public class ProdutoManager implements IProdutoManager {
        
         Produto p1 = new Produto();
         p1.setId(1);
-        p1.setNome("Mouse");
+        p1.setNome("mouse");
         p1.setPreco(350.0);
         
         
         Produto p2 = new Produto();
-        p1.setId(2);
-        p1.setNome("Headset");
-        p1.setPreco(450.0);
+        p2.setId(2);
+        p2.setNome("headset");
+        p2.setPreco(450.0);
         
         
         Produto p3 = new Produto();
-        p1.setId(3);
-        p1.setNome("Teclado");
-        p1.setPreco(450.0);
+        p3.setId(3);
+        p3.setNome("teclado");
+        p3.setPreco(450.0);
         
         produtos.add(p1);
         produtos.add(p2);
@@ -44,4 +44,15 @@ public class ProdutoManager implements IProdutoManager {
     public List<Produto> obterTodos(){
         return produtos;
     }
+
+    @Override
+    public Produto obterPorId(int id) {
+        for (Produto produto : produtos) {
+            if (produto.getId() == id) {
+                return produto;
+            }
+        }
+        return null;
+    }
+    
 }
