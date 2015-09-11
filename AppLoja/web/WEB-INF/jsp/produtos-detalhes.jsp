@@ -12,6 +12,13 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+          <h1>${produto.nome}</h1>
+        <div>
+      
+            <a href="produto-detalhe?id=${produto.id}">
+                <img src="../imagens/tenis${produto.id}.jpg" width="150" height="150" />
+            </a>
+            <p>R$ ${produto.preco}</p>
+        </div>
     </body>
 </html>
